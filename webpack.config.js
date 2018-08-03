@@ -4,9 +4,6 @@ module.exports = {
   // the starting point for our program
   entry: './client/index.js',
 
-  // affects several default webpack settings
-  mode: 'development',
-
   output: {
     // The absolute path for the directory where we want the output to be placed.
     // Whenever we need an absolute path, it's a best practice to use the built-in

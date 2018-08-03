@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Trip Planner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />  
+  <meta charset="UTF-8">
+  <meta name="viewport" content='initial-scale=1,maximum-scale=1,user-scalable=no'>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="./style.css"></link>
+  <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+  <title>Wild Find</title>
 </head>
-
 <body>
-  <header>
-    <h1>TripPlanner</h1>
-  </header>
-  <div id="app">
-    <div id="map"></div>
-    <aside>
-      <div class="panel" id="options-panel">
-        <div>
-          <h2>Hotels</h2>
-          <select id="hotels-choices">
-            <option>An Hotel</option>
-          </select>
-          <button id="hotels-add" class="options-btn">+</button>
-        </div>
-        <div>
-          <h2>Restaurants</h2>
-          <select id="restaurants-choices">
-            <option>A Restaurant</option>
-          </select>
-          <button id="restaurants-add" class="options-btn">+</button>
-        </div>
-        <div>
-          <h2>Activities</h2>
-          <select id="activities-choices">
-            <option>An Activity</option>
-          </select>
-          <button id="activities-add" class="options-btn">+</button>
-        </div>
+<div class="row">
+  <div class="col s12"></div>
+  <h3>Wild Find</h3>
+
+  <aside>
+    <div class="row">
+      <div class="col s12">
+        <button type="button" id="start-button" class="btn btn-secondary">Play Migration</button>
       </div>
-      <div class="panel" id="itinerary">
-        <div>
-          <h2>My Hotel</h2>
-          <ul class="list-group" id="hotels-list">
+    </div>
 
-          </ul>
-        </div>
-        <div>
-          <h2>My Restaurants</h2>
-          <ul class="list-group" id="restaurants-list">
-
-          </ul>
-        </div>
-        <div>
-          <h2>My Activities</h2>
-          <ul class="list-group" id="activities-list">
-
-          </ul>
-        </div>
+    <div class="row">
+      <div class="col s12">
+        <button id="stop-button" class="btn btn-warning">Stop Migration</button>
       </div>
-    </aside>
-  </div>
-  <script src="./bundle.js"></script>
+    </div>
+
+    <!-- <form action="#">
+        <p class="range-field" id="parent-slider">
+          <label>Simulation speed</label>
+          <input type="range" id="slider" min="1" max="3" value="2" />
+          <div id="speeds">
+            <p>0.5x</p>
+            <p>1.0x</p>
+            <p>2.0x</p>
+          </div>
+        </p>
+      </form> -->
+
+      <form action="#">
+          <p>
+            <label for="all">
+              <input name="selections" id="all" type="radio" checked />
+              <span>All Bald Eagles</span>
+            </label>
+          </p>
+          <p>
+            <label for="gender">
+              <input name="selections" id="gender" type="radio" />
+              <span>Haliae or Harmony 2?</span>
+            </label>
+          </p>
+        </form>
+
+        <h4 id="clock">Date</h4>
+        <!-- more info below clock -->
+
+        
+        
+      </aside>
+      <div id="map"></div>
+</div>
+<script src="./bundle.js"></script>
 </body>
-
 </html>
