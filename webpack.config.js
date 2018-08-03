@@ -20,9 +20,13 @@ module.exports = {
     module: {
       loaders: [
         {
-          test: /\.jsx?$/,
-          loader: 'babel-loader',
-          exclude: /node_modules/,
+          test: /\.(ts|tsx)?$/,
+          include: path.resolve(__dirname, 'src'),
+          use: [
+            {
+                loader: 'ts-loader'
+            }
+        ]
         }
       ]
     },

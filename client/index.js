@@ -1,6 +1,6 @@
 const mapboxgl = require('mapbox-gl');
 const d3 = require('d3');
-const data = require('../public/oneMonthEagle.json')
+const data = require('../public/oneMonthEagle.csv')
 
 mapboxgl.accessToken =
     'pk.eyJ1IjoiYnJvbnd5bmgiLCJhIjoiY2ppbjliM3RoMDF2cTNwbHhhYWpxaDA4aSJ9.Ck-5IjFlQeo_sEhv1g70vA'
@@ -30,7 +30,7 @@ function setColor(d) {
 				fill: '#cc0000',
 				stroke: '#ad0000'
 			};
-		} else if (d.["individual-local-identifier"] === 'Harmony 2') {
+		} else if (d["individual-local-identifier"] === 'Harmony 2') {
 			return {
 				fill: '#0479a0',
 				stroke: '#035e7c'
@@ -41,6 +41,11 @@ function setColor(d) {
 				stroke: 'black'
 			};
 		}
-}
 
+			return {
+			fill: '#D8c320',
+			stroke: '#b7a51b'
+		}
+	}
+}
 
