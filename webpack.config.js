@@ -14,6 +14,19 @@ module.exports = {
     // We could name this whatever we want, but bundle.js is typical
     filename: 'bundle.js'
   },
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+        }
+      ]
+    },
+    
 
   // Creates "source map" files (ex. "bundle.js.map"). Modern browsers can automatically
   // request these to "rebuild" your original source code in your dev tools (i.e. the Sources tab).

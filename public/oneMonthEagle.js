@@ -1,4 +1,4 @@
-[
+export const eagles =[
   {
     "event-id": 6533159656,
     "visible": true,
