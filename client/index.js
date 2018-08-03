@@ -11,5 +11,3 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/bronwynh/cjkd4eehc363l2ro2381a2ocj" 
 });
 
-const marker = buildMarker("activities", fullstackCoords);
-marker.addTo(map);
